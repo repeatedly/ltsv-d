@@ -35,11 +35,11 @@ assert(record.host == "127.0.0.1");
 assert(record.size == 777);
 ```
 
-## Dump D object to LTSV format
+## Dump D object into LTSV format
 
 ```d
 /// foo:bar\thoge:fuga\tpiyo:puyo
-auto line = toLTSV(["foo":"bar", "hoge":"fuga", "piyo": "puyo"]);
+auto line = ["foo":"bar", "hoge":"fuga", "piyo":"puyo"].toLTSV();
 ```
 
 struct or class:
@@ -53,7 +53,7 @@ struct Test
 }
 
 /// a:D b:1999 c:10.0
-auto line = toLTSV(Test());
+auto line = Test().toLTSV();
 ```
 
 # Link

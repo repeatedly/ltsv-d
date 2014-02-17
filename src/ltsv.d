@@ -194,6 +194,5 @@ template getFieldName(Type, size_t i)
     static assert((is(Unqual!Type == class) || is(Unqual!Type == struct)), "Type must be class or struct: type = " ~ Type.stringof);
     static assert(i < Type.tupleof.length, text(Type.stringof, " has ", Type.tupleof.length, " attributes: given index = ", i));
 
-    // 3 means () + .
-    enum getFieldName = Type.tupleof[i].stringof[3 + Type.stringof.length..$];
+    enum getFieldName = __traits(identifier, Type.tupleof[i]);
 }

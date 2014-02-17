@@ -56,6 +56,12 @@ struct Test
 auto line = Test().toLTSV();
 ```
 
+# Test
+
+```sh
+% rdmd -unittest --main src/ltsv.d
+```
+
 # Link
 
 * [LTSV](http://ltsv.org/)

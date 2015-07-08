@@ -1,0 +1,7 @@
+{
+	"name": "ltsv",
+	"description": "A Labeled TSV (LTSV) implementation",
+	"authors": ["Masahiro Nakagawa"],
+	"license": "BSL-1.0",
+	"dependencies": {}
+}
